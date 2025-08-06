@@ -14,15 +14,6 @@ jobs:
       - name: Say Hello
         run: echo "hello, world!"
 
-      - name: Check if main.py exists
-        run: |
-          if [ ! -f main.py ]; then
-            echo "❌ main.py does not exist!"
-            exit 1
-          else
-            echo "✅ main.py exists."
-          fi
-
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
