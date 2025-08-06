@@ -1,11 +1,11 @@
-name: Hello and Run Python
+name: Hello and Check File
 
 on:
   push:
     branches: [ main ]
 
 jobs:
-  say-hello-and-run-python:
+  check-and-run:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -13,6 +13,15 @@ jobs:
 
       - name: Say Hello
         run: echo "hello, world!"
+
+      - name: Check if main.py exists
+        run: |
+          if [ ! -f main.py ]; then
+            echo "❌ main.py does not exist!"
+            exit 1
+          else
+            echo "✅ main.py exists."
+          fi
 
       - name: Set up Python
         uses: actions/setup-python@v4
