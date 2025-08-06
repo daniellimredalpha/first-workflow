@@ -1,12 +1,12 @@
 import sys
-from main import add
+from main import subtract
 
-def test_add():
-    assert add(3, 5) == 8
+def test_subtract():
+    assert subtract(3, 5) == 2
 
 if __name__ == "__main__":
     try:
-        test_add()
+        test_subtract()
         print("All tests passed")
     except AssertionError:
         print("Test failed")
