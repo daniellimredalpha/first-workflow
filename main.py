@@ -1,1 +1,5 @@
-print('My favorite food is sushi ')
+def add(a, b):
+    return a + b
+
+if __name__ == "__main__":
+    print("My favorite food is sushi 🍣")
