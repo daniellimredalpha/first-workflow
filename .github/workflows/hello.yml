@@ -1,12 +1,23 @@
-name: Hello World Workflow
+name: Hello and Run Python
 
 on:
   push:
     branches: [ main ]
 
 jobs:
-  say-hello:
+  say-hello-and-run-python:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
       - name: Say Hello
         run: echo "hello, world!"
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
+      - name: Run main.py
+        run: python main.py
