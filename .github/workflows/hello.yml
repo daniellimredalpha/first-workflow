@@ -5,6 +5,10 @@ on:
     branches: [ main ]
   pull_request:
     branches: [ main ]
+<<<<<<< HEAD
+=======
+
+>>>>>>> 09f9622 (changes to yml)
 permissions:
   contents: write   
 
